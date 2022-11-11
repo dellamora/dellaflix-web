@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-// import Header from "../components/Header";
-// import Navigation from "../components/Navigation";
+import Nav from "../../modules/nav";
 
 
 const BaseLayout = ({
@@ -12,7 +11,7 @@ const BaseLayout = ({
 }): JSX.Element => {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* <Header /> */}
+      <Nav/>
       <div className="grow">{children}</div>
       {/* <Navigation /> */}
     </div>
