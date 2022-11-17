@@ -12,7 +12,7 @@ const BaseLayout = ({
   return (
     <div className="h-screen flex flex-col overflow-hidden">      
       <Nav/>
-      <div className="grow">{children}</div>
+      <div className="grow mt-[72px]">{children}</div>
     </div>
   );
 };
