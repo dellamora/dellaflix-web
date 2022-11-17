@@ -10,10 +10,9 @@ const BaseLayout = ({
   children: React.ReactNode;
 }): JSX.Element => {
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-screen flex flex-col overflow-hidden">      
       <Nav/>
       <div className="grow">{children}</div>
-      {/* <Navigation /> */}
     </div>
   );
 };

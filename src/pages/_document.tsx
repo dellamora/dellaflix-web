@@ -6,7 +6,6 @@ export default function Document() {
     <Html>
       <Head>
         <meta name="author" content="Francielle Dellamora" />
-
       </Head>
       <body>
         <Main />
