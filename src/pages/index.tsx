@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect } from 'react'
+import MovieCard from '../common/components/movieCard'
 
 export default function Home() {
     // useEffect(() => {
@@ -11,6 +12,8 @@ export default function Home() {
     // }, [])
     
   return (
-      <div></div>
+    <div>
+     <MovieCard/>
+    </div>
   )
 }
