@@ -14,6 +14,12 @@ module.exports = {
     ],
   theme: {
     extend: {},
+    fontFamily: {
+      Frank: ["Frank Ruhl Libre", "sans-serif"],
+      Inter: ["Inter", "sans-serif"],
+      Jakarta: ["Plus Jakarta Sans", "sans-serif"],
+    },
   },
+
   plugins: [],
 }
