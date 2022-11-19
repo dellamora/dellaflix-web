@@ -6,6 +6,7 @@ import PlayIcon from '../../svgs/playIcon'
 type Props = {}
 
 const MovieCard = (props: Props) => {
+  
 
   return (
     <div className=' w-60 rounded overflow-hidden'>
@@ -34,7 +35,6 @@ const MovieCard = (props: Props) => {
         </div>
       <h1 className=''>lista de cat</h1>
       </div>
-      
      </div>
     </div>
 
