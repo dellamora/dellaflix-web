@@ -18,6 +18,7 @@ module.exports = {
       Frank: ["Frank Ruhl Libre", "sans-serif"],
       Inter: ["Inter", "sans-serif"],
       Jakarta: ["Plus Jakarta Sans", "sans-serif"],
+      Orya: ['Noto Serif Oriya', 'serif']
     },
   },
 
