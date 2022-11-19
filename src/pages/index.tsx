@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { useEffect } from 'react'
 import MovieCard from '../common/components/movieCard'
+import Hero from '../modules/hero/intex'
+import Nav from '../modules/nav'
 
 export default function Home() {
     // useEffect(() => {
@@ -13,7 +15,9 @@ export default function Home() {
     
   return (
     <div>
+     <Hero/>
      <MovieCard/>
+     
     </div>
   )
 }
