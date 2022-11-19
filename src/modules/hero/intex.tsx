@@ -11,11 +11,12 @@ const Hero: React.FC = (): JSX.Element => {
   return (
     <div 
     className="
+    relative
     bg-cover bg-center
     overflow-hidden w-screen"
     >
     <img src="/assets/justinLindo.jpg" className="object-cover w-screen" />
-    <div className="absolute bottom-[50%] left-[4%] w-1/3">
+    <div className="absolute bottom-[10%] lg:bottom-[30%]  left-[4%] w-2/3 lg:w-1/3">
     <h1 className="font-Orya text-white text-4xl font-bold uppercase pb-4"> Justin Bieber: Our World</h1>
     <h1 className="font-Inter text-white font-bold pb-4"> #1 in Movies of All Time  </h1>
     <p className="text-white font-medium text-sm pb-4">
@@ -38,7 +39,7 @@ const Hero: React.FC = (): JSX.Element => {
       </button>
       <button 
         className='
-        bg-slate-500/50 hover:bg-slate-500/25 text-white 
+        bg-slate-500/75 hover:bg-slate-500/50 text-white 
         font-Inter 
         font-semibold
         py-[0.5rem] px-4
