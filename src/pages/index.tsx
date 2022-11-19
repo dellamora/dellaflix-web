@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { title } from 'process'
 import { useEffect } from 'react'
 import MovieCard from '../common/components/movieCard'
 import Hero from '../modules/hero/intex'
@@ -16,7 +17,7 @@ export default function Home() {
   return (
     <div>
      <Hero/>
-     <MovieCard/>
+     <MovieCard movie={{title: "frafdsd",genre_ids:["horror", "asas", "sdsss"],poster_path:"https://mdbootstrap.com/img/new/standard/nature/182.jpg" }}/>
      
     </div>
   )
