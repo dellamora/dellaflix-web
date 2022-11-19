@@ -17,7 +17,7 @@ const SearchInput: React.FC = (): JSX.Element => {
     style={{
       transition: "border 0.5s",
     }}
-    className={`flex absolute right-0 px-1 top-0 bottom-0 border ${isOpen ? " border-[#fff] " : "border-[#000]"}`}
+    className={`flex absolute right-0 px-1 top-0 bottom-0 border ${isOpen ? " border-[#fff] " : "border-transparent"}`}
     ref={divRef}
     >
      <SearchIcon width="24px" fill="#fff" onClick={() => setIsOpen(!isOpen)} />
