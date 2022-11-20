@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {domains: ["mdbootstrap.com"]}
+  images: {domains: ["www.themoviedb.org"]}
 }
 
 module.exports = nextConfig
