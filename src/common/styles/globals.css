@@ -19,3 +19,18 @@ src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;50
   }
   
 
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #101114;
+    z-index: 50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:  #26292e;
+    border-radius: 1ex;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #222428;
+  }
