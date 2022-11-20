@@ -10,8 +10,8 @@ const Nav = ({showBg}:{showBg:boolean}): JSX.Element => {
     {name: "About Me", id: 2, href: "/aboutMe"  },
   ]
   return (
-    <div className={`${showBg ? "bg-[#141414] " : "bg-transparent"} transition-colors duration-500 fixed p-4 px-12 w-screen  overflow-none z-10 `}>
-     <div  className="flex relative bg-transparent  w-full gap-7">
+    <div className={`${showBg ? "bg-[#141414] " : "bg-transparent"} transition-colors duration-500 fixed p-4 px-12  overflow-none z-10 w-[calc(100vw-5px)]`}>
+     <div  className="flex relative bg-transparent w-full gap-7">
      <Link href="/">
         <img src="/assets/DellaFlixIcon.png" className="h-8 "  />
       </Link>
