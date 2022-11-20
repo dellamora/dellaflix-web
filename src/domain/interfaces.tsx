@@ -1,6 +1,14 @@
+export interface BaseSearchResponse<T> {
+  page:          number;
+  status:        number;
+  hasNextPage:   boolean;
+  data:          T;
+
+}
 export interface example {
   ex: number;
 }
+
 
 export interface MovieSearch {
   adult:             boolean;
