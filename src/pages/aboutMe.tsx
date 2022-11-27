@@ -13,7 +13,7 @@ const pages: React.FC = (): JSX.Element => {
           <div className="text-white font-Orya flex flex-col gap-2 "> 
            <h1 className=" text-5xl font-Orya text-white">Hi, I'm Dellamora</h1>
             <p className=" text-lg font-Inter w-2/3 lg:w-4/5 text-justify"> 
-              I have a passion for developing web and tech that makes a positive impact on people's lives.
+              I have a passion for developing weird projects and tech that makes a positive impact on people's lives.
               
             </p>
             <p className="text-lg font-Inter w-2/3 lg:w-4/5 text-justify"> I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
@@ -21,13 +21,13 @@ const pages: React.FC = (): JSX.Element => {
           </div>
           <img className="w-[200px] lg:w-[300px] rounded-full object-cover mr-4 shadow aspect-square" src="/assets/mePc.jpg" alt="avatar"/>
         </div>
-        <div className=" group bg-gray-700/25 rounded flex flex-col items-center justify-center">
+        <a href="https://www.buymeacoffee.com/dellamora" className=" group bg-gray-700/25 rounded flex flex-col items-center justify-center">
             <CoffeeIcon className="group-hover:stroke-slate-500"/>
-           <h1 className="text-white font-Inter  " >Buy me a coffee!</h1> 
-        </div>
+           <h1 className="text-white font-Inter group-hover:text-slate-500" >Buy me a coffee!</h1> 
+        </a>
         <div className="group bg-gray-800/25 rounded flex flex-col items-center justify-center">
           <ClickIcon className="group-hover:stroke-slate-500"/>
-          <h1 className="text-white font-Inter  ">More About Me</h1>
+          <h1 className="text-white font-Inter group-hover:text-slate-500 ">More About Me</h1>
 
         </div>
       </div>
