@@ -30,7 +30,7 @@ const Footer: React.FC = (): JSX.Element => {
      <p className=" font-Inter  mb-2">DellaFlix is not affiliated with Netflix or any other streaming service.</p>
      <p className="text-sm text-gray-500 ">© 2022 Dellamora —
       <a href="https://twitter.com/francidellamora" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@francidellamora</a>
-      <a> Big thanks to Bzz</a>
+      Big Thanks to <a href="https://twitter.com/yungbzz"> @yungbzz</a>
      </p>
      <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
 
