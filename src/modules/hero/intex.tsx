@@ -4,7 +4,7 @@ import React from "react";
 import InfoIcon from "../../common/svgs/infoIcon";
 import PlayIcon from "../../common/svgs/playIcon";
 import Image from "next/image";
-
+// delete
 const Hero: React.FC = (): JSX.Element => {
   return (
     <div className="relative flex items-center h-screen w-screen">
