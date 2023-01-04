@@ -10,16 +10,16 @@ const BaseLayout = ({
 }: {
   children: React.ReactNode;
 }): JSX.Element => {
-  const { ref, inView } = useInView({
-  });
+  const { ref, inView } = useInView({});
   return (
-    <div className="h-screen flex flex-col  bg-[#141414]">      
-      <Nav showBg={!inView}/>
-      
-      <div className="grow w-screen overflow-x-hidden"><div ref={ref} className=" h-[1px]"/>{children}
-      <Footer/>
+    <div className="h-screen flex flex-col  bg-[#141414]">
+      <Nav showBg={!inView} />
+
+      <div className="grow w-screen overflow-x-hidden">
+        <div ref={ref} className=" h-[1px]" />
+        {children}
+        <Footer />
       </div>
-      
     </div>
   );
 };
