@@ -12,10 +12,8 @@ const Hero: React.FC = (): JSX.Element => {
     <div 
     className="
     relative
-    bg-cover bg-center
-    overflow-hidden w-screen"
+    bg-[url('/assets/justinLindo.jpg')] bg-no-repeat bg-cover bg-center h-screen object-cover w-screen pb-4 "
     >
-    <img src="/assets/justinLindo.jpg" className="object-cover w-screen" />
     <div className="absolute bottom-[10%] lg:bottom-[30%]  left-[4%] w-2/3 lg:w-1/3">
     <h1 className="font-Orya text-white text-4xl font-bold uppercase pb-4"> Justin Bieber: Our World</h1>
     <h1 className="font-Inter text-white font-bold pb-4"> #1 in Movies of All Time  </h1>
