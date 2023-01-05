@@ -13,7 +13,7 @@ const Nav = ({ showBg }: { showBg: boolean }): JSX.Element => {
     <div
       className={`${
         showBg ? "bg-[#141414] " : "bg-transparent"
-      } transition-colors duration-500 fixed p-4 px-12  overflow-none z-10 w-[calc(100vw-5px)]`}
+      } z-50 transition-colors duration-500 fixed p-4 px-12  overflow-none  w-[calc(100vw-5px)]`}
     >
       <div className="flex relative bg-transparent w-full gap-7">
         <Link href="/">
