@@ -6,7 +6,7 @@ import PlayIcon from "../../common/svgs/playIcon";
 import Image from "next/image";
 const Hero: React.FC = (): JSX.Element => {
   return (
-    <div className="relative flex items-center h-screen w-screen">
+    <div className="relative flex items-center h-screen w-screen -mb-52">
       <div className="absolute z-10 bottom-0 h-80 w-full bg-gradient-to-t from-[#141414] to-transparent" />
       <Image
         src="/assets/justinLindo.jpg"
