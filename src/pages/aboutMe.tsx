@@ -31,15 +31,15 @@ const pages: React.FC = (): JSX.Element => {
             alt="avatar"
           />
         </div>
-        <div className="group bg-gray-800/25 rounded flex flex-col items-center justify-center">
+        <a
+          href="https://www.dellamora.dev/"
+          className="group bg-gray-800/25 rounded flex flex-col items-center justify-center"
+        >
           <ClickIcon className="group-hover:stroke-slate-500" />
-          <a
-            href="https://www.dellamora.dev/"
-            className="text-white font-Inter group-hover:text-slate-500 "
-          >
+          <h1 className="text-white font-Inter group-hover:text-slate-500 ">
             My personal website
-          </a>
-        </div>
+          </h1>
+        </a>
         <a
           href="https://www.buymeacoffee.com/dellamora"
           className=" group bg-gray-700/25 rounded flex flex-col items-center justify-center"
