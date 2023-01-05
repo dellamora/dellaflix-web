@@ -9,12 +9,13 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper";
 
-const Carousel: React.FC<{ children: React.ReactNode; category?: string }> = ({
-  children,
-  category,
-}): JSX.Element => {
+const Carousel: React.FC<{
+  children: React.ReactNode;
+  category?: string;
+  onActiveChange?: (index: number) => void;
+}> = ({ children, category, onActiveChange }): JSX.Element => {
   return (
-    <div className="relative z-40 mb-8">
+    <div className="relative z-30 mb-8">
       <h1 className=" text-white text-2xl font-semibold mb-3 ml-20 ">
         {category}
       </h1>
@@ -26,7 +27,12 @@ const Carousel: React.FC<{ children: React.ReactNode; category?: string }> = ({
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper"
+        className="mySwiper "
+        on={{
+          activeIndexChange(swiper) {
+            onActiveChange?.(swiper.activeIndex);
+          },
+        }}
       >
         {children}
       </Swiper>

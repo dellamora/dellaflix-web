@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   QueryClient,
   QueryClientProvider,
@@ -10,10 +10,13 @@ import { BaseSearchResponse, MovieSearch } from "../domain/interfaces";
 import Carousel from "../common/components/carousel";
 import { SwiperSlide } from "swiper/react";
 import Top10Movies from "../common/components/top10Movies";
+import CardHover from "../common/components/movieCard/cardHover";
 
 const queryClient = new QueryClient();
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const { isLoading, error, data } = useQuery<
     BaseSearchResponse<MovieSearch[]>
   >({
@@ -31,11 +34,21 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Carousel category="Popular on Dellaflix">
+      <Carousel category="Popular on Dellaflix" onActiveChange={setActiveIndex}>
         {data.data.map((movie, i) => {
           return (
             <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
+              <MovieCard
+                movie={movie}
+                isFirst={i === 0}
+                position={
+                  activeIndex === i
+                    ? "left"
+                    : activeIndex === i + 4
+                    ? "right"
+                    : "middle"
+                }
+              />
             </SwiperSlide>
           );
         })}
