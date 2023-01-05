@@ -12,7 +12,9 @@ const Nav = ({ showBg }: { showBg: boolean }): JSX.Element => {
   return (
     <div
       className={`${
-        showBg ? "bg-[#141414] " : "bg-transparent"
+        showBg
+          ? "bg-gradient-to-b from-black to-[#141414]"
+          : " bg-gradient-to-b from-[#141414] to-transparent"
       } z-50 transition-colors duration-500 fixed p-4 px-12  overflow-none  w-[calc(100vw-5px)]`}
     >
       <div className="flex relative bg-transparent w-full gap-7">
