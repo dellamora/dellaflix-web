@@ -9,6 +9,7 @@ import Hero from "../modules/hero/intex";
 import { BaseSearchResponse, MovieSearch } from "../domain/interfaces";
 import Carousel from "../common/components/carousel";
 import { SwiperSlide } from "swiper/react";
+import Top10Movies from "../common/components/top10Movies";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ export default function Home() {
           );
         })}
       </Carousel>
+      <Top10Movies />
       <Carousel category="Top Searches">
         {data.data.map((movie, i) => {
           return (
