@@ -40,6 +40,7 @@ export default function Home() {
           );
         })}
       </Carousel>
+      <Top10Movies />
       <Carousel category="New Releases">
         {data.data.map((movie, i) => {
           return (
@@ -58,8 +59,25 @@ export default function Home() {
           );
         })}
       </Carousel>
-      <Top10Movies />
       <Carousel category="Top Searches">
+        {data.data.map((movie, i) => {
+          return (
+            <SwiperSlide key={`MovieCard-${i}`}>
+              <MovieCard movie={movie} isFirst={i === 0} />
+            </SwiperSlide>
+          );
+        })}
+      </Carousel>
+      <Carousel category="Romantic">
+        {data.data.map((movie, i) => {
+          return (
+            <SwiperSlide key={`MovieCard-${i}`}>
+              <MovieCard movie={movie} isFirst={i === 0} />
+            </SwiperSlide>
+          );
+        })}
+      </Carousel>
+      <Carousel category="Terror">
         {data.data.map((movie, i) => {
           return (
             <SwiperSlide key={`MovieCard-${i}`}>
