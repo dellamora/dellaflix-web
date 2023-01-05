@@ -33,9 +33,12 @@ const pages: React.FC = (): JSX.Element => {
         </div>
         <div className="group bg-gray-800/25 rounded flex flex-col items-center justify-center">
           <ClickIcon className="group-hover:stroke-slate-500" />
-          <h1 className="text-white font-Inter group-hover:text-slate-500 ">
+          <a
+            href="https://www.dellamora.dev/"
+            className="text-white font-Inter group-hover:text-slate-500 "
+          >
             My personal website
-          </h1>
+          </a>
         </div>
         <a
           href="https://www.buymeacoffee.com/dellamora"
