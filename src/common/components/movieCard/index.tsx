@@ -17,21 +17,8 @@ const MovieCard = ({ movie, isFirst }: Props) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <motion.div
-      className=" w-60 rounded overflow-hidden"
-      whileHover="hover"
-      whileTap="hover"
-      initial="hide"
-      variants={{
-        hide: { zIndex: -10 },
-        hover: {
-          scale: 1.2,
-          transformOrigin: `${isFirst ? "left" : "center"}  center`,
-          zIndex: 100,
-        },
-      }}
-    >
-      <div className="relative aspect-video  w-60">
+    <motion.div className=" w-[300px] rounded overflow-hidden">
+      <div className="relative aspect-video  w-[300px]">
         <Image
           className="object-cover"
           alt="movie poster"
@@ -39,7 +26,8 @@ const MovieCard = ({ movie, isFirst }: Props) => {
           src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movie.backdrop_path}`}
         />
       </div>
-      <motion.div
+
+      {/* <motion.div
         transition={{ bounce: 0, duration: 0 }}
         className="rouded bg-[#181818]"
         variants={{
@@ -72,7 +60,7 @@ const MovieCard = ({ movie, isFirst }: Props) => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
