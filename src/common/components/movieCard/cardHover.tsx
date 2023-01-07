@@ -4,6 +4,7 @@ import React from "react";
 import { MovieSearch } from "../../../domain/interfaces";
 import ChevronIcon from "../../svgs/chevron";
 import PlayIcon from "../../svgs/playIcon";
+import { motion } from "framer-motion";
 type Props = {
   movie: Pick<
     MovieSearch,
@@ -11,13 +12,29 @@ type Props = {
   >;
   onMouseLeave: () => void;
   position?: "left" | "middle" | "right";
+  isFirst?: boolean;
 };
 
 const CardHover = ({ movie, onMouseLeave, position }: Props): JSX.Element => {
   return (
-    <div
-      className="absolute top-0 z-50 w-[300px] rounded overflow-hidden hidden group-hover:block"
+    <motion.div
+      className={`absolute top-0 z-30 w-[300px] rounded overflow-hidden hidden group-hover:block  shadow-sm`}
       onMouseLeave={onMouseLeave}
+      whileHover="hover"
+      initial="hide"
+      variants={{
+        hover: {
+          scale: 1.2,
+          transformOrigin: `${
+            position === "left"
+              ? "left"
+              : position === "right"
+              ? "right "
+              : "center"
+          }  center`,
+          zIndex: 100,
+        },
+      }}
     >
       <div className="relative aspect-video  w-[300px]">
         <Image
@@ -55,7 +72,7 @@ const CardHover = ({ movie, onMouseLeave, position }: Props): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

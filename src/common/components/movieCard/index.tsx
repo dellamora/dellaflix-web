@@ -9,17 +9,16 @@ type Props = {
     MovieSearch,
     "title" | "poster_path" | "genre_ids" | "backdrop_path" | "adult"
   >;
-  isFirst?: boolean;
   position?: "left" | "middle" | "right";
 };
 
-const MovieCard = ({ movie, isFirst, position }: Props) => {
+const MovieCard = ({ movie, position }: Props) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <motion.div className="relative w-[300px] rounded group">
+    <motion.div className="relative w-[285px] rounded group">
       <div
-        className="relative aspect-video  w-[300px]"
+        className="relative aspect-video "
         onMouseEnter={() => setIsHover(true)}
       >
         <Image

@@ -15,7 +15,7 @@ const Carousel: React.FC<{
   onActiveChange?: (index: number) => void;
 }> = ({ children, category, onActiveChange }): JSX.Element => {
   return (
-    <div className="relative z-30 mb-8">
+    <div className="relative z-20 h-auto w-auto m-8 overflow-x-visible">
       <h1 className=" text-white text-2xl font-semibold mb-3 ml-20 ">
         {category}
       </h1>
@@ -27,11 +27,9 @@ const Carousel: React.FC<{
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper "
-        on={{
-          activeIndexChange(swiper) {
-            onActiveChange?.(swiper.activeIndex);
-          },
+        className="mySwiper"
+        onSlideChange={swiper => {
+          onActiveChange?.(swiper.activeIndex);
         }}
       >
         {children}
