@@ -45,7 +45,6 @@ export default function Home() {
             <SwiperSlide key={`MovieCard-${i}`}>
               <MovieCard
                 movie={movie}
-                isFirst={i === 0}
                 position={
                   activeIndex === i + 1
                     ? "right"
@@ -71,7 +70,6 @@ export default function Home() {
             <SwiperSlide key={`MovieCard-${i}`}>
               <MovieCard
                 movie={movie}
-                isFirst={i === 0}
                 position={
                   activeIndex === i + 1
                     ? "right"
@@ -96,7 +94,6 @@ export default function Home() {
             <SwiperSlide key={`MovieCard-${i}`}>
               <MovieCard
                 movie={movie}
-                isFirst={i === 0}
                 position={
                   activeIndex === i + 1
                     ? "right"
