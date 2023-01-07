@@ -30,11 +30,16 @@ export default function Home() {
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: ";
-
   return (
     <>
       <Hero />
-      <Carousel category="Popular on Dellaflix" onActiveChange={setActiveIndex}>
+      <Carousel
+        category="Popular on Dellaflix"
+        onActiveChange={index => {
+          setActiveIndex(index);
+          console.log(index);
+        }}
+      >
         {data.data.map((movie, i) => {
           return (
             <SwiperSlide key={`MovieCard-${i}`}>
@@ -42,10 +47,10 @@ export default function Home() {
                 movie={movie}
                 isFirst={i === 0}
                 position={
-                  activeIndex === i
-                    ? "left"
-                    : activeIndex === i + 4
+                  activeIndex === i + 1
                     ? "right"
+                    : activeIndex === i + 5
+                    ? "left"
                     : "middle"
                 }
               />
@@ -54,47 +59,52 @@ export default function Home() {
         })}
       </Carousel>
       <Top10Movies />
-      <Carousel category="New Releases">
+      <Carousel
+        category="example"
+        onActiveChange={index => {
+          setActiveIndex(index);
+          console.log(index);
+        }}
+      >
         {data.data.map((movie, i) => {
           return (
             <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
+              <MovieCard
+                movie={movie}
+                isFirst={i === 0}
+                position={
+                  activeIndex === i + 1
+                    ? "right"
+                    : activeIndex === i + 5
+                    ? "left"
+                    : "middle"
+                }
+              />
             </SwiperSlide>
           );
         })}
       </Carousel>
-      <Carousel category="Anime">
+      <Carousel
+        category="example z0index"
+        onActiveChange={index => {
+          setActiveIndex(index);
+          console.log(index);
+        }}
+      >
         {data.data.map((movie, i) => {
           return (
             <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
-      <Carousel category="Top Searches">
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
-      <Carousel category="Romantic">
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
-      <Carousel category="Terror">
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard movie={movie} isFirst={i === 0} />
+              <MovieCard
+                movie={movie}
+                isFirst={i === 0}
+                position={
+                  activeIndex === i + 1
+                    ? "right"
+                    : activeIndex === i + 5
+                    ? "left"
+                    : "middle"
+                }
+              />
             </SwiperSlide>
           );
         })}
