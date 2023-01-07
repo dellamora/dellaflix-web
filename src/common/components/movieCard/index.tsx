@@ -16,13 +16,13 @@ const MovieCard = ({ movie, position }: Props) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <motion.div className="relative w-[285px] rounded group">
+    <motion.div className="relative w-[285px]  group">
       <div
-        className="relative aspect-video "
+        className="relative aspect-video"
         onMouseEnter={() => setIsHover(true)}
       >
         <Image
-          className="object-cover"
+          className="object-cover  rounded"
           alt="movie poster"
           fill
           src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movie.backdrop_path}`}
