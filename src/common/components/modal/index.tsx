@@ -37,16 +37,26 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
             animate={{ opacity: 1 }}
             className="flex fixed justify-center items-center z-50  h-screen  w-screen pointer-events-none"
           >
-            <div className="relative flex flex-col pointer-events-auto bg-white rounded-lg w-full lg:max-w-xl lg:max-h-[90vh]  h-auto max-h-screen  md:w-3/5 overflow-y-hidden bg-primaryLight dark:bg-secondaryDark ">
-              <div className="relative aspect-video shrink-0"></div>
-              <div className="flex flex-col  p-4 overflow-y-auto grow pb-24">
-                <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode text-bold mb-5">
-                  {movie.title}
-                </h1>
-                <span className="font-Inter font-medium text-justify dark:text-grayLight">
-                  {movie.overview}
-                </span>
-                <div className="flex flex-row  flex-wrap mt-5"></div>
+            <div className=" flex flex-col pointer-events-auto bg-[#181818] rounded-lg w-full lg:max-w-[52rem] lg:max-h-[90vh]  h-auto max-h-screen  md:w-3/5 overflow-y-hidden ">
+              <div className="relative aspect-video shrink-0">
+                <div className="absolute z-10 bottom-0 h-80 w-full bg-gradient-to-t from-[#181818] to-transparent" />
+                <Image
+                  className="object-cover aspect-video object-left"
+                  alt="movie image"
+                  fill
+                  src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movie.backdrop_path}`}
+                />
+              </div>
+              <div className=" aspect-video shrink-0">
+                <div className="flex flex-col  p-4 overflow-y-auto grow pb-24 text-white">
+                  <h1 className="font-bold text-2xl md:text-title text-gray  text-bold mb-5">
+                    {movie.title}
+                  </h1>
+                  <span className="font-Inter font-medium text-justify ">
+                    {movie.overview}
+                  </span>
+                  <div className="flex flex-row  flex-wrap mt-5"></div>
+                </div>
               </div>
               <div className="flex justify-center absolute w-full pb-4 bottom-0 bg-gradient-to-t from-primary via-primary to-[rgba(0,0,0,0)] pt-14 dark:from-secondaryDark dark:via-secondaryDark "></div>
             </div>

@@ -14,7 +14,7 @@ const Backdrop: React.FC<{ onClose: () => void }> = ({
       onClick={() => {
         onClose();
       }}
-      className="z-40 fixed w-screen h-screen  bg-black/70 "
+      className="z-40 fixed w-screen h-screen  bg-black/80 "
     />
   );
 };
