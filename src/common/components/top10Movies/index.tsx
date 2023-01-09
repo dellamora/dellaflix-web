@@ -33,6 +33,8 @@ const Top10Movies: React.FC = (): JSX.Element => {
           slidesPerView={5}
           centeredSlides={false}
           spaceBetween={30}
+          slidesPerGroup={5}
+          loop={true}
           navigation={true}
           modules={[Navigation]}
           className="SwiperTopTen"
