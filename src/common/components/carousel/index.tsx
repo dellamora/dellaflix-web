@@ -16,7 +16,7 @@ const Carousel: React.FC<{
 }> = ({ children, category, onActiveChange }): JSX.Element => {
   return (
     <div className="relative z-20 h-auto w-auto m-8 overflow-x-visible">
-      <h1 className=" text-white text-2xl font-semibold mb-3 ml-20 ">
+      <h1 className=" text-white text-2xl font-semibold mb-3 ml-11 ">
         {category}
       </h1>
       <Swiper
