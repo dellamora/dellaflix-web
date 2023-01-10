@@ -35,7 +35,7 @@ export default function Home() {
       <Hero />
       <div className="flex flex-col-reverse">
         <Carousel
-          category="Popular on Dellaflix"
+          category="Outro Exemplo"
           onActiveChange={index => {
             setActiveIndex(index);
             console.log(index);
@@ -58,9 +58,9 @@ export default function Home() {
             );
           })}
         </Carousel>
-        <Top10Movies />
+        <Top10Movies movies={data.data} />
         <Carousel
-          category="example"
+          category="Exemplo"
           onActiveChange={index => {
             setActiveIndex(index);
             console.log(index);
@@ -84,7 +84,7 @@ export default function Home() {
           })}
         </Carousel>
         <Carousel
-          category="example z0index"
+          category="Popular On Dellaflix"
           onActiveChange={index => {
             setActiveIndex(index);
             console.log(index);
