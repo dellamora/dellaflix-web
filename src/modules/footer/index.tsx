@@ -58,7 +58,7 @@ const Footer: React.FC = (): JSX.Element => {
           service.
         </p>
         <p className="text-sm text-gray-500 ">
-          © 2022 Dellamora —
+          © 2023 Dellamora —
           <a
             href="https://twitter.com/francidellamora"
             className="text-gray-600 mx-1"
