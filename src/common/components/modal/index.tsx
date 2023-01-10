@@ -24,6 +24,7 @@ type Props = {
 
 const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
   const [mount, setMount] = useState(false);
+  const [isToggleOpen, setIsToggleOpen] = useState(false);
   useEffect(() => {
     setMount(true);
   }, []);
@@ -102,6 +103,10 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                             <ChevronIcon
                               width="35px"
                               className="fill-none group-hover:stroke-white stroke-slate-50 transition-colors"
+                              onClick={() =>
+                                setIsToggleOpen(current => !current)
+                              }
+                              direction={isToggleOpen ? "up" : "down"}
                             />
                           </button>
                           <div className="absolute inset-y-0 my-auto mb-5 h-10 w-full bg-gradient-to-t from-[#181818] to-transparent" />
