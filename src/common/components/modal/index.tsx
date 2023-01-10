@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { MovieSearch } from "../../../domain/interfaces";
 import PlayIcon from "../../../common/svgs/playIcon";
+import CardModal from "./cardMovie";
 
 type Props = {
   isOpen: boolean;
@@ -46,17 +47,17 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                     onClose();
                   }}
                 />
-                <div className="max-w-3xl h-fit mt-8 flex justify-center bg-[#181818] rounded-lg overflow-hidden shadow-sm ">
+                <div className="max-w-[850px] h-fit mt-8 flex justify-center bg-[#323131] rounded-lg overflow-hidden shadow-sm">
                   <div className="relative">
                     <div className="relative aspect-video w-full">
-                      <div className="absolute z-10 bottom-0 h-80 w-full bg-gradient-to-t from-[#181818] to-transparent" />
+                      <div className="absolute z-10 bottom-0 h-80 w-full bg-gradient-to-t from-[#323131] to-transparent" />
                       <Image
                         className="object-cover"
                         alt="movie image"
                         fill
                         src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movie.backdrop_path}`}
                       />
-                      <div className="z-20 absolute  bottom-20 ml-12 w-1/2">
+                      <div className="z-20 absolute bottom-14 ml-12 w-1/2">
                         <h1 className=" font-bold text-3xl  text-white text-bold mb-5">
                           {movie.title}
                         </h1>
@@ -66,8 +67,8 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         </button>
                       </div>
                     </div>
-                    <div className="p-4 space-y-6">
-                      <div className="flex ">
+                    <div className="p-10 space-y-6">
+                      <div className="flex">
                         <div className=" w-3/4 space-y-6">
                           <div className="flex gap-3 text-white">
                             <h1>year</h1>
@@ -86,9 +87,20 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         </div>
                       </div>
 
-                      <div className=" text-white">
-                        <h1>MORE LIKE THIS</h1>
-                        <div className="h-48 w-48 bg-gray-700">cards</div>
+                      <div className=" space-y-6">
+                        <h1 className="font-bold text-white text-2xl">
+                          More Like This
+                        </h1>
+                        <div className="flex gap-x-6 gap-y-5 flex-wrap ">
+                          <CardModal />
+                          <CardModal />
+                          <CardModal />
+                        </div>
+                        <div className="relative w-full h-fit flex justify-center">
+                          <div className=" z-10 h-10 w-10 rounded-full bg-red-600" />
+                          <div className="absolute inset-y-0 my-auto mb-5 h-10 w-full bg-gradient-to-t from-[#181818] to-transparent" />
+                          <hr className="absolute inset-y-0 my-auto w-full border-gray-500" />
+                        </div>
                       </div>
                     </div>
                   </div>

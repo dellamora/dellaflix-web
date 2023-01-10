@@ -15,7 +15,7 @@ const Backdrop: React.FC<{ onClose: () => void }> = ({
         onClose();
       }}
       id="backdrop"
-      className="absolute w-full h-full bg-black/70 "
+      className="absolute w-full h-full bg-black/60 "
     />
   );
 };
