@@ -7,6 +7,7 @@ import { MovieSearch } from "../../../domain/interfaces";
 import PlayIcon from "../../../common/svgs/playIcon";
 import CardModal from "./cardMovie";
 import ChevronIcon from "../../../common/svgs/chevron";
+import CloseIcon from "../../svgs/closeIcon";
 
 type Props = {
   isOpen: boolean;
@@ -58,6 +59,12 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         alt="movie image"
                         fill
                         src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movie.backdrop_path}`}
+                      />
+                      <CloseIcon
+                        className="absolute right-4 top-4 z-50 bg-[#181818] rounded-full p-1"
+                        onClick={() => {
+                          onClose();
+                        }}
                       />
                       <div className="z-20 absolute bottom-14 ml-12 w-1/2">
                         <h1 className=" font-bold text-3xl  text-white text-bold mb-5">
