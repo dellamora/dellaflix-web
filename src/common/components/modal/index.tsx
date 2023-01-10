@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { MovieSearch } from "../../../domain/interfaces";
 import PlayIcon from "../../../common/svgs/playIcon";
 import CardModal from "./cardMovie";
+import ChevronIcon from "../../../common/svgs/chevron";
 
 type Props = {
   isOpen: boolean;
@@ -87,17 +88,22 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         </div>
                       </div>
 
-                      <div className=" space-y-6">
+                      <div className="">
                         <h1 className="font-bold text-white text-2xl">
                           More Like This
                         </h1>
-                        <div className="flex gap-x-6 gap-y-5 flex-wrap ">
+                        <div className="flex gap-x-6 gap-y-5 flex-wrap mt-6">
                           <CardModal />
                           <CardModal />
                           <CardModal />
                         </div>
-                        <div className="relative w-full h-fit flex justify-center">
-                          <div className=" z-10 h-10 w-10 rounded-full bg-red-600" />
+                        <div className="relative -mt-5 w-full h-fit flex justify-center">
+                          <button className="z-40 border-gray-600 bg-gray-700/30 hover:bg-gray-700 group px-0.5 transition-colors items-center rounded-full border-2  h-fit aspect-square hover:border-white">
+                            <ChevronIcon
+                              width="35px"
+                              className="fill-none group-hover:stroke-white stroke-slate-50 transition-colors"
+                            />
+                          </button>
                           <div className="absolute inset-y-0 my-auto mb-5 h-10 w-full bg-gradient-to-t from-[#181818] to-transparent" />
                           <hr className="absolute inset-y-0 my-auto w-full border-gray-500" />
                         </div>
