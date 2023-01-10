@@ -16,10 +16,14 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { MovieSearch } from "../../../domain/interfaces";
+import Image from "next/image";
 
 const numbers = [One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten];
 
-const Top10Movies: React.FC = (): JSX.Element => {
+const Top10Movies: React.FC<{
+  movies: MovieSearch[];
+}> = ({ movies }): JSX.Element => {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
@@ -50,8 +54,13 @@ const Top10Movies: React.FC = (): JSX.Element => {
                 }}
               >
                 <Number />
-                <div className="h-[180px] w-[130px] -ml-2 bg-teal-500">
-                  poster
+                <div className=" relative h-[180px] w-[130px] -ml-2 bg-teal-500">
+                  <Image
+                    className="object-cover"
+                    alt="movie image"
+                    fill
+                    src={`https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/${movies[i].poster_path}`}
+                  />
                 </div>
               </SwiperSlide>
             );
