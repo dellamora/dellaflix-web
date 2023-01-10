@@ -13,7 +13,6 @@ const BaseLayout = ({
   const { ref, inView } = useInView({});
   return (
     <div className="h-screen flex flex-col  bg-[#141414]">
-      <div id="modal-root" />
       <Nav showBg={!inView} />
       <div className="grow w-screen overflow-x-hidden">
         <div ref={ref} className=" h-[1px]" />

@@ -8,6 +8,7 @@ export default function Document() {
         <meta name="author" content="Francielle Dellamora" />
       </Head>
       <body>
+        <div id="modal-root" />
         <Main />
         <NextScript />
       </body>
