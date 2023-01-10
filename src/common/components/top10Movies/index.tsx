@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useRef, useState } from "react";
-import One from "../../svgs/one";
-import Three from "../../svgs/three";
-import Seven from "../../svgs/seven";
-import Two from "../../svgs/two";
-import Four from "../../svgs/four";
-import Five from "../../svgs/five";
-import Six from "../../svgs/six";
-import Eight from "../../svgs/eight";
-import Nine from "../../svgs/nine";
-import Ten from "../../svgs/ten";
+import One from "../../svgs/numbers/one";
+import Three from "../../svgs/numbers/three";
+import Seven from "../../svgs/numbers/seven";
+import Two from "../../svgs/numbers/two";
+import Four from "../../svgs/numbers/four";
+import Five from "../../svgs/numbers/five";
+import Six from "../../svgs/numbers/six";
+import Eight from "../../svgs/numbers/eight";
+import Nine from "../../svgs/numbers/nine";
+import Ten from "../../svgs/numbers/ten";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
