@@ -45,11 +45,14 @@ const Top10Movies: React.FC = (): JSX.Element => {
                 key={`number-${i}`}
                 className="flex "
                 style={{
-                  marginLeft: i === 0 ? "90px" : "0px",
+                  marginLeft: i === 0 ? "20px" : "0px",
+                  marginRight: i === 5 ? "20px" : "0px",
                 }}
               >
                 <Number />
-                <div className="h-[180px] w-[130px] bg-teal-500">poster</div>
+                <div className="h-[180px] w-[130px] -ml-2 bg-teal-500">
+                  poster
+                </div>
               </SwiperSlide>
             );
           })}
