@@ -88,10 +88,19 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                             <p className="text-white">{movie.overview}</p>
                           </div>
                         </div>
-                        <div className=" text-white">
-                          <h1>cast</h1>
-                          <h1>generos</h1>
-                          <h1>esse filme é</h1>
+                        <div className=" text-gray-500">
+                          <h1>
+                            Cast:
+                            <span className="ml-1 font-semibold text-white">
+                              Justin Bieber
+                            </span>
+                          </h1>
+                          <h1>
+                            Genres:
+                            <span className="ml-1 font-semibold text-white">
+                              Roamnce
+                            </span>
+                          </h1>
                         </div>
                       </div>
 
@@ -100,9 +109,7 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                           More Like This
                         </h1>
                         <div className="flex gap-x-6 gap-y-5 flex-wrap mt-6">
-                          <CardModal />
-                          <CardModal />
-                          <CardModal />
+                          <CardModal movie={movie} />
                         </div>
                         <div className="relative -mt-5 w-full h-fit flex justify-center">
                           <button className="z-40 border-gray-600 bg-gray-700/30 hover:bg-gray-700 group px-0.5 transition-colors items-center rounded-full border-2  h-fit aspect-square hover:border-white">
