@@ -50,10 +50,10 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                     onClose();
                   }}
                 />
-                <div className="max-w-[850px] h-fit mt-8 flex justify-center bg-[#323131] rounded-lg overflow-hidden shadow-sm">
+                <div className="max-w-[850px] h-fit mt-8 flex justify-center bg-[#181818] rounded-lg overflow-hidden shadow-sm">
                   <div className="relative">
                     <div className="relative aspect-video w-full">
-                      <div className="absolute z-10 bottom-0 h-80 w-full bg-gradient-to-t from-[#323131] to-transparent" />
+                      <div className="absolute z-10 bottom-0 h-28 w-full bg-gradient-to-t from-[#181818] to-transparent" />
                       <Image
                         className="object-cover"
                         alt="movie image"
@@ -66,7 +66,7 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                           onClose();
                         }}
                       />
-                      <div className="z-20 absolute bottom-14 ml-12 w-1/2">
+                      <div className="z-20 absolute bottom-14 ml-12 w-1/2 ">
                         <h1 className=" font-bold text-3xl  text-white text-bold mb-5">
                           {movie.title}
                         </h1>
@@ -76,14 +76,13 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         </button>
                       </div>
                     </div>
-                    <div className="p-10 space-y-6">
+                    <div className="relative z-30 pt-4 p-10 space-y-6 bg-[#181818]">
                       <div className="flex">
                         <div className=" w-3/4 space-y-6">
-                          <div className="flex gap-3 text-white">
-                            <h1>year</h1>
-                            <h1>age</h1>
-                            <h1>time</h1>
-                            <h1>year</h1>
+                          <div className="flex font-semibold gap-3 text-white">
+                            <h1>2022</h1>
+                            <h1>AGE</h1>
+                            <h1>duration</h1>
                           </div>
                           <div>
                             <p className="text-white">{movie.overview}</p>
