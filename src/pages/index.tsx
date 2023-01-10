@@ -33,79 +33,81 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Carousel
-        category="Popular on Dellaflix"
-        onActiveChange={index => {
-          setActiveIndex(index);
-          console.log(index);
-        }}
-      >
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard
-                movie={movie}
-                position={
-                  activeIndex === i + 1
-                    ? "right"
-                    : activeIndex === i + 5
-                    ? "left"
-                    : "middle"
-                }
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
-      <Top10Movies />
-      <Carousel
-        category="example"
-        onActiveChange={index => {
-          setActiveIndex(index);
-          console.log(index);
-        }}
-      >
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard
-                movie={movie}
-                position={
-                  activeIndex === i + 1
-                    ? "right"
-                    : activeIndex === i + 5
-                    ? "left"
-                    : "middle"
-                }
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
-      <Carousel
-        category="example z0index"
-        onActiveChange={index => {
-          setActiveIndex(index);
-          console.log(index);
-        }}
-      >
-        {data.data.map((movie, i) => {
-          return (
-            <SwiperSlide key={`MovieCard-${i}`}>
-              <MovieCard
-                movie={movie}
-                position={
-                  activeIndex === i + 1
-                    ? "right"
-                    : activeIndex === i + 5
-                    ? "left"
-                    : "middle"
-                }
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Carousel>
+      <div className="flex flex-col-reverse">
+        <Carousel
+          category="Popular on Dellaflix"
+          onActiveChange={index => {
+            setActiveIndex(index);
+            console.log(index);
+          }}
+        >
+          {data.data.map((movie, i) => {
+            return (
+              <SwiperSlide key={`MovieCard-${i}`}>
+                <MovieCard
+                  movie={movie}
+                  position={
+                    activeIndex === i + 1
+                      ? "right"
+                      : activeIndex === i + 5
+                      ? "left"
+                      : "middle"
+                  }
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Carousel>
+        <Top10Movies />
+        <Carousel
+          category="example"
+          onActiveChange={index => {
+            setActiveIndex(index);
+            console.log(index);
+          }}
+        >
+          {data.data.map((movie, i) => {
+            return (
+              <SwiperSlide key={`MovieCard-${i}`}>
+                <MovieCard
+                  movie={movie}
+                  position={
+                    activeIndex === i + 1
+                      ? "right"
+                      : activeIndex === i + 5
+                      ? "left"
+                      : "middle"
+                  }
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Carousel>
+        <Carousel
+          category="example z0index"
+          onActiveChange={index => {
+            setActiveIndex(index);
+            console.log(index);
+          }}
+        >
+          {data.data.map((movie, i) => {
+            return (
+              <SwiperSlide key={`MovieCard-${i}`}>
+                <MovieCard
+                  movie={movie}
+                  position={
+                    activeIndex === i + 1
+                      ? "right"
+                      : activeIndex === i + 5
+                      ? "left"
+                      : "middle"
+                  }
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Carousel>
+      </div>
     </>
   );
 }

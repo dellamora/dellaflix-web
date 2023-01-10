@@ -23,7 +23,7 @@ const Top10Movies: React.FC = (): JSX.Element => {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <>
+    <div>
       <h1 className=" text-white text-2xl font-semibold mb-3 ml-20 ">
         Top 10 Movies in Brazil Today
       </h1>
@@ -55,7 +55,7 @@ const Top10Movies: React.FC = (): JSX.Element => {
           })}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
