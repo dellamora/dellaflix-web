@@ -1,15 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-import { QueryClient, useQuery } from "@tanstack/react-query";
+import { useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
 import Hero from "../modules/hero/intex";
 import { BaseSearchResponse, MovieSearch } from "../domain/interfaces";
 import Top10Movies from "../common/components/top10Movies";
-import { useMovieByGenre } from "../common/hooks/useMovieByGenre";
 import MovieCarousel from "../common/components/movieCarousel";
-const queryClient = new QueryClient();
 
 export default function Home() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const {
     isLoading: baseLoading,
     error,
@@ -21,10 +17,9 @@ export default function Home() {
         res.json(),
       ),
   });
-  const animationMovies = useMovieByGenre("Animation");
   const isLoading = useMemo(() => {
-    return baseLoading || animationMovies.isLoading;
-  }, [baseLoading, animationMovies.isLoading]);
+    return baseLoading;
+  }, [baseLoading]);
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: ";
@@ -32,14 +27,14 @@ export default function Home() {
     <>
       <Hero />
       <div className="flex flex-col-reverse">
-        <MovieCarousel category="Comedy" />
-        <MovieCarousel category="Mystery" />
+        <MovieCarousel category="Horror" />
+        <MovieCarousel category="Drama" />
         <MovieCarousel category="Animation" />
         <Top10Movies
           category="Top 10 Movies Popular On Dellaflix"
           movies={data.data.results}
         />
-        <MovieCarousel category="Fantasy" />
+        <MovieCarousel category="Crime" />
       </div>
     </>
   );
