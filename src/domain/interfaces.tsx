@@ -1,8 +1,8 @@
 export interface BaseSearchResponse<T> {
   page: number;
-  status: number;
-  hasNextPage: boolean;
-  data: T;
+  total_pages: number;
+  total_results: number;
+  results: T;
 }
 export interface example {
   ex: number;
