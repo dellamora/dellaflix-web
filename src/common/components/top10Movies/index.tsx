@@ -23,13 +23,14 @@ const numbers = [One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten];
 
 const Top10Movies: React.FC<{
   movies: MovieSearch[];
-}> = ({ movies }): JSX.Element => {
+  category: string;
+}> = ({ movies, category }): JSX.Element => {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
     <div>
       <h1 className=" text-white text-2xl font-semibold mb-3 ml-20 ">
-        Top 10 Movies in Brazil Today
+        {category}
       </h1>
       <div className="flex ">
         <Swiper
