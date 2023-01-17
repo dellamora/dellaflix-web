@@ -13,6 +13,8 @@ type Props = {
     | "backdrop_path"
     | "adult"
     | "overview"
+    | "release_date"
+    | "vote_average"
   >;
 };
 
@@ -35,8 +37,8 @@ const CardModal = ({ movie }: Props): JSX.Element => {
       </div>
       <div className="p-4 ">
         <div className="font-semibold flex gap-x-2 text-base">
-          <h1>AGE</h1>
-          <h1>2022</h1>
+          <h1>{movie.adult}</h1>
+          <h1>{movie.release_date}</h1>
         </div>
         <p className="mt-4 text-xs text-gray-300 font-semibold">
           {movie.overview}

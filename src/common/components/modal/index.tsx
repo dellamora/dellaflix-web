@@ -20,6 +20,8 @@ type Props = {
     | "backdrop_path"
     | "adult"
     | "overview"
+    | "release_date"
+    | "vote_average"
   >;
 };
 
@@ -80,9 +82,9 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                       <div className="flex">
                         <div className=" w-3/4 space-y-6">
                           <div className="flex font-semibold gap-3 text-white">
-                            <h1>2022</h1>
-                            <h1>AGE</h1>
-                            <h1>duration</h1>
+                            <h1>{movie.release_date}</h1>
+                            <h1>{movie.adult}</h1>
+                            <h1>{movie.vote_average}</h1>
                           </div>
                           <div>
                             <p className="text-white">{movie.overview}</p>
@@ -90,15 +92,9 @@ const MovieModal = ({ isOpen, onClose, movie }: Props): JSX.Element => {
                         </div>
                         <div className=" text-gray-500">
                           <h1>
-                            Cast:
-                            <span className="ml-1 font-semibold text-white">
-                              Justin Bieber
-                            </span>
-                          </h1>
-                          <h1>
                             Genres:
                             <span className="ml-1 font-semibold text-white">
-                              Roamnce
+                              {movie.genre_ids}
                             </span>
                           </h1>
                         </div>
