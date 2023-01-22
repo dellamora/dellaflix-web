@@ -27,7 +27,8 @@
     "react-intersection-observer": "^9.4.1",
     "swiper": "^8.4.5",
     "tailwind": "^4.0.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.0",
